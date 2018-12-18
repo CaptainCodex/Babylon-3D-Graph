@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>3D Graph</title>
+
+    <script src="true3D-2.0.1.min.js"></script>
+
+    <style>
+        html,
+        body {
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #renderCanvas {
+            width: 100%;
+            height: 100%;
+            touch-action: none;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="renderCanvas"></canvas>
+    <script>
+        var canvas = document.getElementById('renderCanvas');
+
+        // HoloGraphV2(canvas, null); // to see default example
+
+        HoloGraphV2(canvas, {
+            type: 'bar', // "line" or "bar", default = bar
+            title: '3D Graph', // title on top of graph
+            width: 15, // how wide is the graph in units (X-axis). default = 15
+            // X-axis array of dates ex. MM/DD/YY or MM/DD/YYYY HH:mm
+            dates: [
+                '02/14/2019',
+                '02/15/2019',
+                '02/16/2019',
+                '02/17/2019',
+                '02/18/2019',
+                '02/19/2019',
+                '02/20/2019',
+                '02/21/2019',
+                '02/22/2019',
+                '02/23/2019',
+                '02/24/2019',
+                '02/25/2019',
+                '02/26/2019',
+                '02/27/2019',
+                '02/28/2019',
+                '02/29/2019',
+                '02/30/2019',
+                '02/31/2019',
+                '03/01/2019',
+                '03/02/2019',
+                '03/03/2019',
+                '03/04/2019',
+                '03/05/2019',
+                '03/06/2019',
+                '03/07/2019',
+                '03/08/2019',
+                '03/09/2019',
+                '03/10/2019',
+                '03/11/2019',
+                '03/12/2019',
+                '03/13/2019',
+                '03/14/2019',
+                '03/15/2019'
+            ],
+            // Z-axis list of categories
+            categories: [
+                'Babies',
+                'Toddlers',
+                'Kids',
+                'Teens',
+                'Young Adults',
+                'Adults'
+            ],
+            // array of data 
+            // x = index of date on X-axis, ex. 0 to options.dates.length - 1
+            // z = index of category on Z-axis, ex. 0 to options.categories.length - 1
+            // value = Y-axis int or float Number value
+            // if data = [], example values will be generated
+            data: [
+                /*{
+                    x: 32, z: 1, value: 114.5
+                }*/
+            ],
+            xTitle: 'Timeline',
+            yTitle: 'Accounts (millions)',
+            zTitle: 'Ages'
+        });
+    </script>
+</body>
+
+</html>
