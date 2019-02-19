@@ -1,4 +1,4 @@
-# Babylon-3D-Graph
+# Babylon 3D Graph
 A 3D bar and line graph with 3 axis data made in BabylonJS. Bars' colors change depending on height.
 
 ### Line Example
